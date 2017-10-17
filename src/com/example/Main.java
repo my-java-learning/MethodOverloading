@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) {
         int newScore = calculateScore("Tim", 500);
         System.out.println("New score is " + newScore);
-        calculateScore(75);
+        calculateScore(13);
         calculateScore();
 
-        System.out.println("Centimeters : " + calcFeetAndInchesToCentimeters(5));
+        System.out.println("Centimeters : " + calcFeetAndInchesToCentimeters(100));
     }
 
     public static int calculateScore(String playerName, int score){
@@ -34,8 +34,7 @@ public class Main {
 
     public static double calcFeetAndInchesToCentimeters(int inches){
         if(inches >= 0 ){
-            double feet = inches / 12;
-            return calcFeetAndInchesToCentimeters(feet , inches);
+            return calcFeetAndInchesToCentimeters((int) inches / 12 , (int) inches % 12);
         }
         return -1;
     }
